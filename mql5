@@ -1,0 +1,76 @@
+mql5
+// ICT Tools and PSI Full Version in one
+// Developer's Site: forexroboteasy.com
+// Development: Forex Robot Easy Team
+
+// Central Bank Dealing Range (CBDR) tool
+void CalculateCBDR(datetime startTime, datetime endTime)
+{
+    // Calculate CBDR logic here
+}
+
+// Asian Range FLOUT tool
+void CalculateAsianRangeFlout()
+{
+    // Calculate Asian Range FLOUT logic here
+}
+
+// Calculate Profiles and Standard Deviation targets
+void CalculateProfilesAndStdDev()
+{
+    // Calculate Profiles and Standard Deviation logic here
+}
+
+// Seek & Destroy Profile tool with Standard Deviation targets
+void SeekAndDestroyProfile()
+{
+    // Seek & Destroy Profile logic here
+}
+
+// IPDA 20, 40, and 60 tools
+void CalculateIPDAValues()
+{
+    // Calculate IPDA values logic here
+}
+
+// Monthly Swing Grades W%R tool
+void CalculateMonthlySwingGrades()
+{
+    // Calculate Monthly Swing Grades W%R logic here
+}
+
+// Main function to perform analysis and provide trading functionality
+void OnTick()
+{
+    datetime startTime = Time[0] - PeriodSeconds() * 10; // Example start time
+    datetime endTime = Time[0]; // Example end time
+
+    // Calculate CBDR
+    CalculateCBDR(startTime, endTime);
+
+    // Calculate Asian Range FLOUT
+    CalculateAsianRangeFlout();
+
+    // Calculate Profiles and Standard Deviation
+    CalculateProfilesAndStdDev();
+
+    // Seek & Destroy Profile
+    SeekAndDestroyProfile();
+
+    // Calculate IPDA values
+    CalculateIPDAValues();
+
+    // Calculate Monthly Swing Grades W%R
+    CalculateMonthlySwingGrades();
+
+    // Trading logic and execution here
+}
+
+// Entry point of the program
+void OnStart()
+{
+    // Initialize necessary indicators and variables here
+
+    // Execute the main trading function
+    OnTick();
+}
